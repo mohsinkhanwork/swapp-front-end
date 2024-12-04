@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'DejaVu Sans Mono';
+    src:
+        url('/public/assets/fonts/deja-vu-sans-mono.woff2') format('woff2'),
+        url('/public/assets/fonts/deja-vu-sans-mono.woff') format('woff');
+    font-weight: 400;
+    font-style: regular;
+    font-display: swap;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+@layer components {
+    button {
+        @apply focus-visible:outline-none;
+    }
+
+    /* Button */
+    .btn {
+        @apply flex items-center justify-center gap-1.5 rounded-lg border border-black bg-black px-2.5 py-2 text-white transition hover:border-gray hover:bg-gray disabled:opacity-70;
+    }
+    .btn-linear {
+        @apply border-transparent bg-white text-gray shadow-4xl hover:border-black hover:bg-black hover:text-white hover:shadow-none;
+    }
+    .btn-icon {
+        @apply grid h-9 w-9 place-content-center border-transparent bg-white p-0 text-gray shadow-[0_0_0_1px_rgba(18,43,105,0.08),0_1px_2px_0_rgba(18,43,105,0.08)] hover:border-black hover:bg-black hover:text-white hover:shadow-none;
+    }
+
+    /* Forms */
+    .form-input,
+    .form-textarea,
+    .form-select,
+    .form-multiselect {
+        @apply block w-full rounded-lg border-transparent bg-white px-3 py-2 text-sm/[18px] text-gray shadow-[0_0_0_1px_rgba(18,43,105,0.08),0_1px_2px_0_rgba(18,43,105,0.08)] !ring-0 placeholder:text-gray focus:border-primary disabled:bg-[#e9ecef];
+    }
+    .form-select,
+    .form-multiselect {
+        @apply truncate bg-none pr-10;
+    }
+    .form-checkbox {
+        @apply size-4 rounded-sm border-[1.33px] border-gray text-black !outline-none !ring-0 !ring-offset-0;
+    }
+
+    /* Sidebar */
+    .sidebar.open {
+        @apply left-0;
+    }
+    .sidebar .nav-item {
+        @apply flex w-full items-center gap-2 rounded-lg px-3 py-2.5 text-left text-sm/[18px] font-medium text-black transition hover:bg-gray-200;
+    }
+    .sidebar .nav-item.active {
+        @apply relative bg-gray-200 after:absolute after:-left-3 after:top-1/2 after:h-5 after:w-[3px] after:-translate-y-1/2 after:bg-primary;
+    }
+
+    /* text-editor */
+    .text-editor .ql-toolbar {
+        @apply !m-0 divide-x-[1px] divide-[#EAECF0] rounded-t-lg !border-x-0 !border-b !border-t-0 !border-gray-100 bg-gray-200 !p-0;
+    }
+    .text-editor .ql-toolbar .ql-formats {
+        @apply !m-0 px-2.5 py-2;
+    }
+
+    /* Table css */
+    table.billing-history th {
+        @apply border-b border-gray-100 bg-gray-200 p-4 text-left font-medium leading-[18px] last:text-right;
+    }
+    table.billing-history td {
+        @apply px-4 py-2.5 leading-[18px] text-black last:w-0 last:text-right;
+    }
+    table.billing-history tbody tr,
+    table.followers-blocklist tbody tr {
+        @apply transition hover:bg-gray-200;
+    }
+    table.followers-blocklist th {
+        @apply border-b border-gray-100 bg-gray-200 px-5 py-4 text-left font-medium leading-[18px] text-gray first:w-0 first:pl-5 first:pr-0 last:w-0 last:pl-0 last:pr-5;
+    }
+    table.followers-blocklist td {
+        @apply px-5 py-2.5 leading-[18px] text-black first:pl-5 first:pr-0 last:pl-0 last:pr-5;
+    }
+}
+.error {
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 10px;
+}
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #b1e346;
+    animation: spin 1s linear infinite;
+}
+.common-skill-detail input, .common-skill-detail textarea{
+border: 1px solid #e5e5e5 !important;
+padding: 7px;
+}
+.common-skill-btn button{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.modal-close-btn{
+    font-size: 22px;
+}
+table .spinner {
+    width: 40px;
+    height: 40px;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

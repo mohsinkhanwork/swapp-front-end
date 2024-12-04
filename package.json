@@ -1,0 +1,78 @@
+{
+  "name": "swap-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^43.0.0",
+    "@ckeditor/ckeditor5-vue": "^7.0.0",
+    "@headlessui/vue": "^1.7.19",
+    "@mdi/js": "^7.4.47",
+    "@phudak/ckeditor5-emoji": "^1.1.1",
+    "axios": "^1.6.8",
+    "ckeditor5": "^43.0.0",
+    "ckeditor5-premium-features": "^43.0.0",
+    "core-js": "^3.8.3",
+    "date-fns": "^4.1.0",
+    "dayjs": "^1.11.13",
+    "moment": "^2.30.1",
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.77.8",
+    "stylus-loader": "^8.1.0",
+    "toastr": "^2.1.4",
+    "vue": "^3.2.13",
+    "vue-height-collapsible": "^0.1.1",
+    "vue-i18n": "^9.11.0",
+    "vue-material-design-icons": "^5.3.0",
+    "vue-meta": "^2.4.0",
+    "vue-multiselect": "^3.1.0",
+    "vue-router": "^4.3.0",
+    "vue-wysiwyg": "^1.7.2",
+    "vue2-dropzone": "^3.6.0",
+    "vue3-google-signin": "^1.3.5",
+    "vue3-popper": "^1.5.0",
+    "vue3-quill": "^0.3.1",
+    "vuetify": "^3.7.2",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@tailwindcss/forms": "^0.5.7",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "autoprefixer": "^10.4.18",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "laravel-echo": "^1.17.0",
+    "postcss": "^8.4.35",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.12",
+    "pusher-js": "^8.4.0-rc2",
+    "tailwindcss": "^3.4.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
